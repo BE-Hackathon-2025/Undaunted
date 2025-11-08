@@ -1,12 +1,13 @@
-import { FC, useState } from 'react';
-import { Typography, Container, Grid, Divider, TextField, Switch, Box, Button } from '@mui/material';
+import { useState } from 'react';
+import { Typography, Container, Divider, TextField, Switch, Box, Button } from '@mui/material';
+import Grid from '@mui/material/GridLegacy'
 import AppBar from './components/AppBar';
 
 interface Props {
   onLogout: () => void;
 }
 
-const FlightDetails: FC<Props> = ({ onLogout }) => {
+const FlightDetails = ({ onLogout }: Props) => {
   const [departTime, setDepartTime] = useState('');
   const [departDate, setDepartDate] = useState('');
   const [location, setLocation] = useState('');
