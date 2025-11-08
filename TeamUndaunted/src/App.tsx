@@ -50,18 +50,29 @@ function App() {
     <Divider sx={{ mb: 4}}/>
 
     <Grid container>
-    <Typography variant='h4'> Departure Time <TextField id='filled-basic'></TextField></Typography>
-    <Typography variant='h4'> Departure Date <TextField id='filled-basic'></TextField></Typography>
+    <Typography variant='h4'> 
+      Departure Time 
+      <TextField id='filled-basic' label='--:--' value={departTime}></TextField>
+    </Typography>
+    <Typography variant='h4'> 
+      Departure Date 
+      <TextField id='filled-basic' label="mm/dd/yyyy" value={departDate}></TextField>
+    </Typography>
     </Grid>
     <Divider sx={{ mb: 4}}/>
 
     <Grid container>
-    <Typography variant='h4'> Starting Location <TextField id='filled-basic'></TextField></Typography>
+    <Typography variant='h4'>
+       Starting Location 
+      <TextField id='filled-basic' label='Home, Hotel' value = {location}></TextField>
+      </Typography>
     </Grid>
-     <Divider sx={{mb:4}}/>
+
+    <Divider sx={{mb:4}}/>
 
     <Grid >
-    <Typography variant='h5'> Accesibility Settings</Typography>
+    <Typography variant='h5'> Accesibility</Typography>
+
     <Typography variant='h4'> Do you require a wheel chair or assistance? </Typography>
       <Box display="flex" alignItems="center" gap={1}>
       <Typography variant="body1">No</Typography>
@@ -79,7 +90,7 @@ function App() {
 
    <Container sx={{ display: 'flex', mt:5, justifyContent:'center'}}>
       <Button variant='contained' onClick={handleClick} size='large' sx={{backgroundColor: 'primary'}} >
-        Calculate Time
+        Calculate Arrival Time
      </Button>
     </Container>
 
