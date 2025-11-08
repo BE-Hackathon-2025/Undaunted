@@ -1,7 +1,7 @@
 // Login.tsx
 
 
-import React, { useState, FC } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import { Container, TextField, Button, Typography, Box } from '@mui/material';
 
@@ -19,7 +19,7 @@ interface LoginProps {
   onLoginSuccess: () => void;
 }
 
-const Login: FC<LoginProps> = ({ onLoginSuccess }) => {
+const Login = ({ onLoginSuccess }: LoginProps) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
